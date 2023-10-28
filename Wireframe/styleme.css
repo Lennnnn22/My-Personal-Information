@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(0, 0, 0);
+  }
+  
+ 
+
+  .top{
+    position: absolute;
+    top: 50px;
+    left: 75px;
+  }
+
+  a.H, a.A, a.C {
+    color: #ffffff; 
+    text-shadow: 2px 1px 0 #7A7A7A;
+      text-decoration: none;
+  }
+  
+  a.H:hover, a.A:hover, a.C:hover {
+    color: #eeff00;
+  }
+
+  .about {
+    position: absolute;
+    top: 190px;
+    left: 250px;
+    text-shadow: 3px 5px 2px #474747;
+    font-family: bungee, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #ff002b;
+    font-size: 15px;
+  }
+
+  .intro {
+    position: absolute;
+    top: 240px;
+    left: 250px;
+    text-shadow: 3px 5px 2px #474747;
+    font-family: bungee, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: #00e1ff;
+    font-size: 20px;
+    
+  }
+
+  .hobbies{
+    position: absolute;
+    margin-top: 600px;
+    left: 250px;
+    text-shadow: 3px 5px 2px #474747;
+    font-family: bungee, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #00e1ff;
+    font-size: 15px;
+  }
+
+  .skills{
+    position: absolute;
+    margin-top: 1250px;
+    left: 250px;
+    text-shadow: 3px 5px 2px #474747;
+    font-family: bungee, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #00e1ff;
+    font-size: 15px;
+  }
+
+  .gallery {
+    --d: 4s;
+    display: grid;
+    width: 220px;
+    position: absolute;
+    margin-top: 550px;
+    right: 400px;
+  }
+  
+  .gallery > img {
+    grid-area: 1/1;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 10px solid #f2f2f2;
+    box-shadow: 0 0 4px #0007;
+    z-index: 2;
+    animation: slide var(--d) infinite, z-order var(--d) infinite steps(1);
+  }
+  
+  .gallery img:last-child {
+    animation-name: slide, z-order-last;
+  }
+  
+  .gallery > img:nth-child(1) {
+    animation-delay: calc(0* var(--d));
+    --r: 9deg;
+  }
+  
+  .gallery > img:nth-child(2) {
+    animation-delay: calc(-0.2* var(--d));
+    --r: 14deg;
+  }
+  
+  .gallery > img:nth-child(3) {
+    animation-delay: calc(-0.4* var(--d));
+    --r: 15deg;
+  }
+  
+  .gallery > img:nth-child(4) {
+    animation-delay: calc(-0.6* var(--d));
+    --r: 16deg;
+  }
+  
+  .gallery > img:nth-child(5) {
+    animation-delay: calc(-0.8* var(--d));
+    --r: 4deg;
+  }
+  
+  @keyframes slide {
+    10% {
+      transform: translateX(120%) rotate(var(--r));
+    }
+    0%, 100%, 20% {
+      transform: translateX(0%) rotate(var(--r));
+    }
+  }
+  @keyframes z-order {
+    10%, 20% {
+      z-index: 1;
+    }
+    80% {
+      z-index: 2;
+    }
+  }
+  @keyframes z-order-last {
+    10%, 20% {
+      z-index: 1;
+    }
+    90% {
+      z-index: 2;
+    }
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .social {
+    position: fixed;
+    top: 500px;
+  }
+  .social ul {
+    padding: 0px;
+    transform: translate(-270px, 0);
+  }
+  .social ul li {
+    display: block;
+    margin: 5px;
+    background: rgba(0, 0, 0, 0.36);
+    width: 300px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 0 30px 30px 0;
+    transition: all 1s;
+  }
+  .social ul li:hover {
+    transform: translate(110px, 0);
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .social ul li:hover a {
+    color: #000;
+  }
+  .social ul li:hover i {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.36);
+    transform: rotate(360deg);
+    transition: all 1s;
+  }
+  .social ul li i {
+    margin-left: 10px;
+    color: #ffffff;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    background: #000000;
+    transform: rotate(0deg);
+  }
+
+  .container{
+    width: 500px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    margin-top: 1300px;
+    left: 75%;
+    overflow: hidden;
+    border: 5px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: -1px 5px 15px black;
+}
+
+/*Area of images*/
+.wrapper{
+    width: 100%;
+    display: flex;
+    animation: slidein 12s infinite;
+}
+
+img{
+    width: 100%;
+}
+/*Animation activated by keyframes*/
+@keyframes slidein{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+    
+}
+
+  
+  

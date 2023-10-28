@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button class="operator" id="clear">C</button>
+            <button id="seven">7</button>
+            <button id="eight">8</button>
+            <button id="nine">9</button>
+            <button class="operator" id="divide">/</button>
+            <button id="four">4</button>
+            <button id="five">5</button>
+            <button id="six">6</button>
+            <button class="operator" id="multiply">*</button>
+            <button id="one">1</button>
+            <button id="two">2</button>
+            <button id="three">3</button>
+            <button class="operator" id="subtract">-</button>
+            <button id="zero">0</button>
+            <button id="decimal">.</button>
+            <button class="operator" id="equals">=</button>
+            <button class="operator" id="add">+</button>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    let display = document.getElementById("display");
+    let buttons = document.querySelectorAll("button");
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            if (button.id === "clear") {
+                display.value = "";
+            } else if (button.id === "equals") {
+                try {
+                    display.value = eval(display.value);
+                } catch (error) {
+                    display.value = "Error";
+                }
+            } else {
+                display.value += e.target.innerText
+            }
+        });
+    });
+});
+</script>
+
