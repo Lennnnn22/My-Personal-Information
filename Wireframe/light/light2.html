@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Light</title>
+
+</head>
+<body>
+    <div class="bulb">
+        <img id="bulb_img" src="pic/first.PNG" onclick="light_change()" class="bulb image-size">
+        </div>
+        
+</body>
+</html>
+
+<script>
+     function light_change() {
+    let image = document.getElementById('bulb_img');
+
+    if (image.src.includes("first.PNG")) {
+        image.src = "pic/second.PNG";
+
+        setTimeout(() => {
+            image.src = "pic/first.PNG"; 
+        }, 10000);
+
+    } else if (image.src.includes("second")) {
+        image.src = "pic/third.PNG"; 
+    } else if (image.src.includes("third")) {
+        image.src = "pic/fourth.PNG"; 
+    } else if (image.src.includes("fourth")) {
+        image.src = "pic/fifth.PNG"; 
+    
+    
+    } else {
+        image.src = "pic/first.PNG"; 
+    }
+}
+    </script>

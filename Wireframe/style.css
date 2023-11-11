@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: Arial, sans-serif;
   overflow: hidden;
@@ -11,18 +11,19 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  animation: backgroundChange 6s linear infinite;
-  z-index: -1; /* Place the background behind the text */
+  animation: backgroundChange 8s linear infinite;
+  z-index: -1; 
 }
 
 @keyframes backgroundChange {
   0%, 100% {
-      background: #000;
+      background:  #101820;
   }
   50% {
-      background: #460b37;
+      background: #6b6104;
   }
 }
+
  
 .top{
   position: absolute;
@@ -43,17 +44,16 @@ a.H:hover, a.A:hover, a.C:hover {
 .me {
   position: absolute;
   top: 150px;
-  right: 250px;
+  right: 400px;
   scale: 1.3;
-  -webkit-box-shadow: 4px 1px 45px 30px #E8CDFF; 
-box-shadow: 4px 1px 45px 30px #E8CDFF;
+  
 
 }
 
 .p {
   position: absolute;
-  left: 250px;
-  top: 500px;
+  left: 200px;
+  top: 550px;
   font: italic bold Georgia, Serif;
   text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
   color: #ffffff;
@@ -109,7 +109,7 @@ box-shadow: 4px 1px 45px 30px #E8CDFF;
 
 footer {
   text-align: center;
-  background-color: #312424;
+  background-color: #000000;
   color: #ffffff;
   padding: auto;
   margin-top: 945px;
@@ -164,4 +164,5 @@ footer {
   background: #000000;
   transform: rotate(0deg);
 }
+
 

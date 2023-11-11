@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.bulb {
+    position: absolute;
+    left: 400px;
+    top: 150px;
+}
+
